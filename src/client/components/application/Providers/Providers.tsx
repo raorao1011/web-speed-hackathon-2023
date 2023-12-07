@@ -1,4 +1,4 @@
-import { ApolloProvider, SuspenseCache } from '@apollo/client';
+import { ApolloProvider } from '@apollo/client';
 import type { FC, ReactNode } from 'react';
 import { Suspense } from 'react';
 import { ErrorBoundary } from 'react-error-boundary';
@@ -12,10 +12,8 @@ type Props = {
   children: ReactNode;
 };
 
-const suspenseCache = new SuspenseCache();
-
 export const Providers: FC<Props> = ({ children }) => (
-  <ApolloProvider client={apolloClient} suspenseCache={suspenseCache}>
+  <ApolloProvider client={apolloClient} >
     <BrowserRouter>
       <RecoilRoot>
         <ErrorBoundary fallbackRender={Fallback}>
