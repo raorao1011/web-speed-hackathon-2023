@@ -1,5 +1,4 @@
 import * as currencyFormatter from 'currency-formatter';
-
 import type { FC } from 'react';
 import { memo } from 'react';
 
