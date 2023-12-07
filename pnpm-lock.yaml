@@ -118,9 +118,6 @@ dependencies:
   typeorm:
     specifier: 0.3.11
     version: 0.3.11(sqlite3@5.1.4)(ts-node@10.9.1)
-  zipcode-ja:
-    specifier: 0.0.7
-    version: 0.0.7
   zod:
     specifier: 3.20.6
     version: 3.20.6
@@ -6905,10 +6902,6 @@ packages:
 
   /zen-observable@0.8.15:
     resolution: {integrity: sha512-PQ2PC7R9rslx84ndNBZB/Dkv8V8fZEpk83RLgXtYd0fwUgEjseMn1Dgajh2x6S8QbZAFa9p2qVCEuYZNgve0dQ==}
-    dev: false
-
-  /zipcode-ja@0.0.7:
-    resolution: {integrity: sha512-DJw7EUtu8aCwBrtlDwD/y2owHlkgNDmuC981eDz9EadDd/7/YofvFveImE+nFij0ftVQnZasyrAmW/HC6oIMcA==}
     dev: false
 
   /zod@3.20.6:

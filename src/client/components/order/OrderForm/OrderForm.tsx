@@ -1,6 +1,5 @@
 import { useFormik } from 'formik';
 import type { ChangeEventHandler, FC } from 'react';
-import zipcodeJa from 'zipcode-ja';
 
 import { PrimaryButton } from '../../foundation/PrimaryButton';
 import { TextInput } from '../../foundation/TextInput';
@@ -31,14 +30,24 @@ export const OrderForm: FC<Props> = ({ onSubmit }) => {
 
   const handleZipcodeChange: ChangeEventHandler<HTMLInputElement> = (event) => {
     formik.handleChange(event);
+    if (event.target.value.length < 7) return;
 
-    const zipCode = event.target.value;
-    const address = structuredClone(zipcodeJa)[zipCode]?.address ?? [];
-    const prefecture = address.shift();
-    const city = address.join(' ');
+    fetch(`https://zipcloud.ibsnet.co.jp/api/search?zipcode=${event.target.value}`, {
+      method: 'GET',
+    })
+      .then((res) => {
+        if (!res.ok) {
+          throw new Error('Network response was not ok');
+        }
+        return res.json();
+      })
+      .then((res) => {
+        console.log(res);
 
-    formik.setFieldValue('prefecture', prefecture);
-    formik.setFieldValue('city', city);
+        formik.setFieldValue('prefecture', res?.results[0]?.address1 || '');
+        formik.setFieldValue('city', `${res?.results[0]?.address2 || ''} ${res?.results[0]?.address3 || ''}`);
+        console.log(res.results);
+      });
   };
 
   return (
@@ -72,7 +81,7 @@ export const OrderForm: FC<Props> = ({ onSubmit }) => {
           <TextInput
             required
             id="streetAddress"
-            label="番地・建物名など"
+            label="番地・建物名などa"
             onChange={formik.handleChange}
             placeholder="例: 40番1号 Abema Towers"
             value={formik.values.streetAddress}
