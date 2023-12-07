@@ -13,7 +13,7 @@ type Props = {
 };
 
 export const Providers: FC<Props> = ({ children }) => (
-  <ApolloProvider client={apolloClient} >
+  <ApolloProvider client={apolloClient}>
     <BrowserRouter>
       <RecoilRoot>
         <ErrorBoundary fallbackRender={Fallback}>
