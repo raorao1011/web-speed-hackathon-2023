@@ -42,7 +42,7 @@ export default defineConfig(async ({ mode }) => {
           ],
         },
       },
-      target: 'es2015',
+      target: 'chrome110',
     },
     plugins: [
       react(),
