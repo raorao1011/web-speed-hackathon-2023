@@ -26,7 +26,6 @@ export default defineConfig(async ({ mode }) => {
     build: {
       assetsInlineLimit: 20480,
       cssCodeSplit: true,
-      cssTarget: 'es6',
       minify: true,
       rollupOptions: {
         output: {
