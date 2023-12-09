@@ -37,9 +37,6 @@ dependencies:
   currency-formatter:
     specifier: 1.5.9
     version: 1.5.9
-  date-time-format-timezone:
-    specifier: 1.0.22
-    version: 1.0.22
   formik:
     specifier: 2.2.9
     version: 2.2.9(react@18.2.0)
@@ -2690,10 +2687,6 @@ packages:
   /date-fns@2.29.3:
     resolution: {integrity: sha512-dDCnyH2WnnKusqvZZ6+jA1O51Ibt8ZMRNkDZdyAyK4YfbDwa/cEmuztzG5pk6hqlp9aSBPYcjOlktquahGwGeA==}
     engines: {node: '>=0.11'}
-    dev: false
-
-  /date-time-format-timezone@1.0.22:
-    resolution: {integrity: sha512-4hEeKPpNlbFO05ldht9FwJEy2g1xL7kU3dTPY5hNSd1AyMjrrIeUS54kSWgt/KdttYshhjDMIonU+vCmL4NjVw==}
     dev: false
 
   /debug@2.6.9:
