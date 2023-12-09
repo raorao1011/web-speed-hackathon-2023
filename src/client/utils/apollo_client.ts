@@ -46,6 +46,6 @@ export const apolloClient = new ApolloClient({
     },
   },
   link,
-  queryDeduplication: false,
+  queryDeduplication: true,
   uri: '/graphql',
 });
