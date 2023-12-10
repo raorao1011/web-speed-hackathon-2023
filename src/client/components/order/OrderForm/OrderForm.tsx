@@ -81,7 +81,7 @@ export const OrderForm: FC<Props> = ({ onSubmit }) => {
           <TextInput
             required
             id="streetAddress"
-            label="番地・建物名などa"
+            label="番地・建物名など"
             onChange={formik.handleChange}
             placeholder="例: 40番1号 Abema Towers"
             value={formik.values.streetAddress}
