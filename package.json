@@ -50,7 +50,6 @@
     "reflect-metadata": "0.1.13",
     "setimmediate": "1.0.5",
     "sqlite3": "5.1.4",
-    "throttle-debounce": "5.0.0",
     "typeorm": "0.3.11",
     "zod": "3.20.6"
   },
