@@ -4,7 +4,7 @@ export const container = () => css`
   width: 100%;
 `;
 
-export const inner = () => css`
+export const inner = ({ width }: { width: number | undefined }) => css`
   margin: 0 auto;
-  max-width: 1024px;
+  width: ${width}px;
 `;
